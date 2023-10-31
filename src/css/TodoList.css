@@ -1,0 +1,15 @@
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#todoTable {
+    margin-top: 1rem;
+}
+
+.todo-block {
+    border: 1px solid #ffaf87;
+    padding: 1rem;
+    border-radius: 20px;
+    color: #cf584d;
+}

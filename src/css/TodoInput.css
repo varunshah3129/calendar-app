@@ -1,0 +1,21 @@
+.todo-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+::-ms-input-placeholder {
+    color: #cf584d;
+}
+
+::-webkit-input-placeholder {
+    color: #cf584d;
+}
+
+::placeholder {
+    color: #cf584d;
+}
+
+input {
+    color: #cf584d;
+}

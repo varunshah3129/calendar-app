@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap');
+
+body {
+  font-family: 'Tiro Gurmukhi', serif;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+h3 {
+  color: #cf584d;
+}
+
+.todo-grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  /* for mobile or small screen device */
+  #todoTable, .todo-calendar {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* for tablets or laptops or desktops */
+  .todo-grid-parent {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 1rem;
+  }
+  #calendar {
+    position: sticky;
+    top: 0;
+  }
+}
