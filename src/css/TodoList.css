@@ -1,15 +1,285 @@
-td {
-    border: 1px solid black;
-    padding: 5px;
+/* Container styling */
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-#todoTable {
-    margin-top: 1rem;
+.app-title {
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #ff7473;
 }
 
+/* Todo List Container and Headers styling */
+.todo-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.todo-list-container {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    /*display: flex;*/
+    flex-direction: column;
+    /*align-items: center; !* Horizontal centering *!*/
+    justify-content: center; /* Vertical centering */
+    height: 100vh; /* This takes the full viewport height */
+    gap: 20px; /* This creates space between flex children */
+}
+
+.flex-row-container {
+    display: flex;
+    gap: 20px;
+}
+
+.todo-list-container > * {
+    margin: 0 10px;
+}
+
+.todo-list-header {
+    background-color: #E5E5E5;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 450px;
+}
+
+.todo-date-header, .todo-category-header, .todo-text-header, .todo-time-header {
+    flex: 1;
+    text-align: center;
+}
+
+.todo-actions-header {
+    flex: 1.5;
+    text-align: center;
+}
+
+/* Individual Todo Block styling */
 .todo-block {
-    border: 1px solid #ffaf87;
-    padding: 1rem;
-    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E5E5E5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo items styling */
+.todo-text, .todo-date, .todo-time, .todo-category {
+    flex: 1;
+    text-align: center;
+}
+
+.todo-text {
+    font-weight: bold;
+    color:  #cf584d;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Todo actions styling */
+.todo-actions {
+    display: flex;
+    gap: 10px;
+    flex: 1.5;
+}
+
+/* Individual action button styling */
+.todo-action {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.todo-action:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Edit Modal styling */
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-modal input,
+.edit-modal button {
+    margin: 5px 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-modal button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-modal button:hover {
+    background-color: #0056b3;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.completed .todo-text,
+.completed .todo-date,
+.completed .todo-time,
+.completed .todo-category {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.todo-block, .todo-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.load-more-btn {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: #cf584d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: #ff7a6a;
+}
+
+/* No tasks available styling */
+.no-tasks {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
     color: #cf584d;
+}
+
+/* Delete Confirmation Popup styling */
+.delete-confirm-popup {
+    position: fixed;   /* Use fixed to position it relative to the viewport */
+    top: 50%;          /* Start from 50% from the top */
+    left: 50%;         /* Start from 50% from the left */
+    transform: translate(-50%, -50%);  /* Move it backwards by half of its width and height to center it */
+    z-index: 1000;     /* Ensure it appears on top of other elements */
+    padding: 20px;
+    background: linear-gradient(330deg, #cf584d, #1593AF), linear-gradient(244deg, #222 23.3%, #1AB8DB 99.48%, #1593AF 100%);
+    border-radius: 8px;
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: inline;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    z-index: 999; /* below the popup */
+}
+
+.delete-confirm-popup button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.task-deleted-popup {
+    position: fixed;   /* Use fixed to position it relative to the viewport */
+    top: 50%;          /* Start from 50% from the top */
+    left: 50%;         /* Start from 50% from the left */
+    transform: translate(-50%, -50%);  /* Move it backwards by half of its width and height to center it */
+    z-index: 1000;     /* Ensure it appears on top of other elements */
+
+    /* Below styles are for presentation, you can adjust them as needed */
+    padding: 20px;
+    background: linear-gradient(330deg, #cf584d, #1593AF), linear-gradient(244deg, #222 23.3%, #1AB8DB 99.48%, #1593AF 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.delete_task {
+    background:#1593AF;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.delete_task:hover {
+    background-color: #1AB8DB;
+}
+
+.cancel {
+    background: #cf584d;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cancel:hover {
+    background: #ff7473;
 }

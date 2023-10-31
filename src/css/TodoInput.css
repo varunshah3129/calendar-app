@@ -1,3 +1,185 @@
+/* Todo Wrapper and Open Button */
+.todo-wrapper {
+    position: relative;
+}
+
+.open-popup-btn {
+    font-size: 4rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    justify-content: center;
+    color: #FFFFFF;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: linear-gradient(123deg, #cf584d, #1593AF), linear-gradient(180deg, #222 23.3%, #1AB8DB 99.48%, #1593AF 100%);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.open-popup-btn:hover {
+    background: linear-gradient(240deg, #cf584d, #1593AF);
+}
+
+.open-popup-btn:hover::after {
+    content: "Add a new task";
+    position: absolute;
+    left: 110%; /* Position it to the right of the button */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* This will make sure the tooltip is centered vertically relative to the button */
+    background-color: #333;
+    color: #fff;
+    font-size: 10px;  /* Make the text smaller */
+    padding: 2px 5px;
+    border-radius: 2px;
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;  /* Start hidden */
+    transition: opacity 0.3s, transform 0.3s;  /* Animation effect */
+    transform: translateX(-10px) translateY(-50%); /* Start a little bit to the left */
+}
+
+.open-popup-btn:hover::after {
+    opacity: 1;  /* Show the tooltip on hover */
+    transform: translateX(0) translateY(-50%); /* Move to its final position */
+}
+
+.add-task-icon {
+    /*position: relative;*/
+    /*left: 35%;*/
+    font-weight: bold;
+    font-size: 2rem;
+    color: #cf584d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background to emphasize the modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust as needed */
+    max-width: 400px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 10px; /* You can adjust the padding to your liking */
+}
+
+.title-container {
+    width: 100%;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin: 1rem 0;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    padding: 10px 30px 10px 0px;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.modal-footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.good {
+    background-color: #cf584d;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    padding: 8px 24px 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+}
+
+.button.good:hover {
+    background-color: #ff7a6a;
+}
+
+.button.good span {
+    margin-right: 8px;
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    padding: 5px 15px;
+    background: none;
+}
+
+
+/* Todo Input Styles */
 .todo-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,4 +200,46 @@
 
 input {
     color: #cf584d;
+}
+
+input[type="submit"] {
+    width: auto;
+    margin: 0;
+}
+
+.due-today {
+    background: linear-gradient(123deg, #cf584d, #1593AF), linear-gradient(180deg, #222 23.3%, #1AB8DB 99.48%, #1593AF 100%);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+}
+
+.due-today .todo-text, .due-today .todo-category, .due-today .todo-date, .due-today .todo-time, .completed, .completed .todo-text {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.todo-block.completed, .completed {
+    background: linear-gradient(320deg, #cf584d, #1593AF), linear-gradient(240deg, #222 23.3%, #1AB8DB 99.48%, #1593AF 100%);
+    text-decoration: line-through; /* Adds a strikethrough to indicate completion */
+    height: 60px;
+}
+
+.completed-badge {
+    position: absolute;
+    top: 11px;
+    left: -15px;
+    background-color: rgba(21, 147, 175, 0.8);
+    color: #FFFFFF;
+    padding: 5px 6px;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    font-weight: bold;
+    z-index: 1;
+    border: 2px solid white;
+    mix-blend-mode: multiply;
+    font-size: 0.70rem;
+}
+
+.todo-block {
+    position: relative;
+    z-index: 0;
 }

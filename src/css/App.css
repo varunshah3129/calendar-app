@@ -2,6 +2,8 @@
 
 body {
   font-family: 'Tiro Gurmukhi', serif;
+  background: #ff7473;
+  background: linear-gradient(to top right, #ff7473, #ffc952);
 }
 
 .strike {
@@ -14,7 +16,7 @@ h3 {
 
 .todo-grid-parent {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
@@ -28,7 +30,6 @@ h3 {
 @media screen and (min-width: 768px) {
   /* for tablets or laptops or desktops */
   .todo-grid-parent {
-    display: grid;
     grid-template-columns: 2fr 3fr;
     column-gap: 1rem;
   }

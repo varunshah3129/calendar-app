@@ -1,3 +1,229 @@
-.todo-calendar {
-    /* Add styles specific to the calendar here. Placeholder for now. */
+/* Calendar Container */
+.calendar-main {
+    position: relative;
+    top: 30px;
+}
+
+.calendar-container {
+    width: 502px;
+    height: auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px solid #e0e0e0;
+    overflow: hidden;
+    position: relative; /* Ensure absolute positioning inside this container */
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.calendar-header .arrow {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.calendar-header .arrow:hover {
+    color: #666;
+}
+
+/* Week Days */
+.week-days {
+    display: flex;
+    margin-bottom: 12px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.week-days li {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+}
+
+/* Weeks and Days */
+.weeks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #D5D4DF;
+}
+
+.weeks > span {
+    width: 70px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #D5D4DF;
+    border-bottom: 1px solid #D5D4DF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: content-box;
+}
+
+.weeks > span:hover {
+    background-color: #f5f5f5;
+}
+
+.weeks > span.active {
+    background-color: #0047ab;
+    color: white;
+    font-weight: bold;
+}
+
+.today {
+    color: #cf584d;
+}
+
+.weeks > span.today {
+    border: 1px solid #0047ab;
+    background-color: #45539D;
+}
+
+.empty-day.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: calc(100vw - 20px);
+    z-index: 1;
+    white-space: nowrap;
+    /*display: none;*/
+    /* Adjusting the position to leave space for the arrow */
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tooltip:not(.visible) {
+    display: none;
+}
+
+/* Arrow styles */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    left: -10px; /* Position the arrow to the left of the tooltip */
+    top: 50%; /* Center the arrow vertically */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #ccc transparent transparent;
+    /* Adjust the arrow color */
+    z-index: -1;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    left: -9px; /* Position the arrow to the left of the tooltip, 1px offset to overlay the ::before pseudo-element */
+    top: 50%; /* Center the arrow vertically */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 9px 4px 0;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+.has-tasks:hover {
+    background-color: #f5f5f5;
+}
+
+.task-counter {
+    position: relative;
+    top: -24px;
+    /* left: -4px; */
+    background-color: #0047ab;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 4px;
+    font-size: 10px;
+    z-index: 1;
+    left: 18px;
+}
+
+.has-tasks:hover .tooltip,
+.day-cell:hover .tooltip {
+    display: block;  /* Show the tooltip on hover */
+}
+
+.tooltip-tasks {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tooltip-tasks li {
+    margin: 2px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    max-height: 60px;
+    overflow-y: auto;
+}
+
+ul li {
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.day-cell {
+    position: relative;
+}
+
+.today .task-counter {
+    background-color: #FFFFFF;
+    color: #cf584d;
+}
+
+.sunday {
+    color: red;
+}
+
+.sunday:hover {
+    background-color: #ffe6e6; /* A light red background for hover state */
+}
+
+.sunday.active, .sunday.today {
+    background-color: red;
+    color: white;
 }
