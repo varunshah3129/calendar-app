@@ -13,7 +13,7 @@ A React-based web application that provides a detailed view of tasks for any giv
 - **Task Sorting**: Prioritizes tasks due today, then incomplete future tasks, past incomplete tasks, and finally completed tasks. Sorted further by date and time.
 - **Popups & Overlays**: Interactive popups for task editing and deletion, with an overlay for improved UI experience.
 
-## Screenshots for some features
+## Screenshots of some features
 ![Todo App](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_1.png)
 ![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_2.png)
 ![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_3.png)
