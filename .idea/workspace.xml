@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8def11e6-ea9c-446e-ab7d-a80f54656d3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.14 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Todo_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.26 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Todo_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.38 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Todo_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.50 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Todo_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.51.02 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Todo_2.png" afterDir="false" />
-    </list>
+    <list default="true" id="8def11e6-ea9c-446e-ab7d-a80f54656d3a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +55,7 @@
       <workItem from="1698163676202" duration="1200000" />
       <workItem from="1698260466211" duration="599000" />
       <workItem from="1698682498743" duration="3000" />
-      <workItem from="1698857374914" duration="747000" />
+      <workItem from="1698857374914" duration="1049000" />
     </task>
     <servers />
   </component>
