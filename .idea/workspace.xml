@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8def11e6-ea9c-446e-ab7d-a80f54656d3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/comopnents/Calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comopnents/TodoInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comopnents/TodoList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/Calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/TodoInput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/TodoList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/icons-task-today.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/icons-task.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.14 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.26 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.38 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.50.50 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Screenshot 2023-11-01 at 12.51.02 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,20 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/varun.shah/WebstormProjects/calendar-app/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +57,7 @@
       <workItem from="1698163676202" duration="1200000" />
       <workItem from="1698260466211" duration="599000" />
       <workItem from="1698682498743" duration="3000" />
+      <workItem from="1698857374914" duration="416000" />
     </task>
     <servers />
   </component>
