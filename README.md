@@ -14,11 +14,11 @@ A React-based web application that provides a detailed view of tasks for any giv
 - **Popups & Overlays**: Interactive popups for task editing and deletion, with an overlay for improved UI experience.
 
 ## Screenshots for some features
-![Todo App](./assets/Screenshot 2023-11-01 at 12.50.14 PM.png)
-![Add Task](./assets/Screenshot 2023-11-01 at 12.50.26 PM.png)
-![Add Task](./assets/Screenshot 2023-11-01 at 12.50.38 PM.png)
-![Add Task](./assets/Screenshot 2023-11-01 at 12.50.50 PM.png)
-![Add Task](./assets/Screenshot 2023-11-01 at 12.51.02 PM.png)
+![Todo App](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_1.png)
+![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_2.png)
+![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_3.png)
+![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_4.png)
+![Add Task](.https://raw.githubusercontent.com/varunshah3129/calendar-app/main/Todo_5.png)
 
 ## Available Scripts
 
